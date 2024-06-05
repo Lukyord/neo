@@ -31,8 +31,8 @@
                                     <div class="product-content">
                                         <img src="./assets/img/design/brand1-products.png" alt="brand1-products" class="product-content-image">
                                         <div class="product-content-text">
-                                            <h2 class="font-heading size-h1 product-content-heading strong">Eversense</h2>
-                                            <p class="size-h6">
+                                            <h2 class="font-heading size-h1 product-content-heading weight-medium c-black">Eversense</h2>
+                                            <p class="size-h6 c-black">
                                                 เสน่ห์ความสดใสและน่าดึงดูดใจของสาว ๆ คือความหอมมมมม.....
                                                 แค่เพียงได้สัมผัสกลิ่นก็ตกหลุมรักได้ในทันที Eversense (เอเวอร์เซ้นส์)
                                                 จึงเริ่มต้นส่งต่อเสน่ห์ผ่านผลิตภัณฑ์ความหอมด้วยโคโลญในปีพ.ศ. 2532
