@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="sc-brands alignfull overflow-hidden">
-                    <div class="swiper auto loop">
+                    <div class="swiper auto autoplay loop">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="sc-banner">
@@ -26,26 +26,19 @@
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
-                                <div class="sc-banner product-content-wrapper">
-                                    <div class="product-content">
-                                        <img src="./assets/img/design/brand1-products.png" alt="brand1-products" class="product-content-image">
-                                        <div class="product-content-text">
-                                            <h2 class="font-heading size-h1 product-content-heading weight-medium c-black">Eversense</h2>
-                                            <p class="size-h6 c-black">
-                                                เสน่ห์ความสดใสและน่าดึงดูดใจของสาว ๆ คือความหอมมมมม.....
-                                                แค่เพียงได้สัมผัสกลิ่นก็ตกหลุมรักได้ในทันที Eversense (เอเวอร์เซ้นส์)
-                                                จึงเริ่มต้นส่งต่อเสน่ห์ผ่านผลิตภัณฑ์ความหอมด้วยโคโลญในปีพ.ศ. 2532
-                                                ซึ่งได้การตอบรับเป็นอย่างดีจากสาว ๆ ติดใจจนขึ้นเป็นอันดับ 1 ในตลาด
-                                                ผลิตภัณฑ์ความหอม
-                                            </p>
-                                            <button>
-                                                <p>ดูผลิตภัณฑ์</p>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            $product = array(
+                                'image' => './assets/img/design/brand1-products.png',
+                                'title' => 'Eversense',
+                                'description' => 'เสน่ห์ความสดใสและน่าดึงดูดใจของสาว ๆ คือความหอมมมมม.....
+                                แค่เพียงได้สัมผัสกลิ่นก็ตกหลุมรักได้ในทันที Eversense (เอเวอร์เซ้นส์)
+                                จึงเริ่มต้นส่งต่อเสน่ห์ผ่านผลิตภัณฑ์ความหอมด้วยโคโลญในปีพ.ศ. 2532
+                                ซึ่งได้การตอบรับเป็นอย่างดีจากสาว ๆ ติดใจจนขึ้นเป็นอันดับ 1 ในตลาด
+                                ผลิตภัณฑ์ความหอม'
+                            );
+                            include($root . 'include/element-brand-product.php');
+                            ?>
+
 
                             <div class="swiper-slide">
                                 <div class="sc-banner">
@@ -59,15 +52,17 @@
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
-                                <div class="sc-banner">
-                                    <picture class="object-fit">
-                                        <source media="(min-width:992px)" srcset="./assets/img/design/brand2-cover.jpg">
-                                        <source media="(min-width:0px)" srcset="./assets/img/design/brand2-cover-m.jpg">
-                                        <img src="./assets/img/design/brand2-cover.jpg" alt="">
-                                    </picture>
-                                </div>
-                            </div>
+                            <?php
+                            $product = array(
+                                'image' => './assets/img/design/brand2-products.png',
+                                'title' => 'TROS',
+                                'description' => 'TROS (ทรอส) ผลิตภัณฑ์ดูแลตัวเองและสร้างเสน่ห์สำหรับผู้ชาย เชื่อว่าทุกคน สามารถ
+                                    เท่ในแบบตัวเองได้ แค่เติมความหอมมั่นใจ ก็ทำเอาสาว ๆ ติดหนึบได้ ง่าย ๆ TROS จึง
+                                    เริ่มบุกเบิกตลาดผลิตภัณฑ์โคโลญเสริมความมั่นใจสำหรับ ผู้ชายในปี พ.ศ. 2533 และปร
+                                    ะสบความสำเร็จเป็นอย่างยิ่งด้วยยอดขาย ครองอันดับ 1 มายาวนานจนถึงปัจจุบัน'
+                            );
+                            include($root . 'include/element-brand-product.php');
+                            ?>
 
                             <div class="swiper-slide">
                                 <div class="sc-banner">
@@ -80,6 +75,18 @@
                                     </picture>
                                 </div>
                             </div>
+
+                            <?php
+                            $product = array(
+                                'image' => './assets/img/design/brand3-products.png',
+                                'title' => 'Fineline',
+                                'description' => 'เพราะแฟชั่นคือภาพสะท้อนความเป็นเอกลักษณ์ของคุณ ไฟน์ไลน์ (fineline) แบรนด์ที่พร้
+                                    อมสนับสนุนทุกแฟชั่นจึงเป็นมากกว่าผลิตภัณฑ์ดูแลผ้า ด้วยความเข้าใจและต้องการสร้
+                                    างแรงบันดาลใจให้ทุกคนเกิดความกล้าที่จะนำเสนอความเป็นตัวตนในแบบฉบับของคุณเองด้ว
+                                    ยผลิตภัณฑ์ทั้งซัก ปรับ และรีด'
+                            );
+                            include($root . 'include/element-brand-product.php');
+                            ?>
                         </div>
                         <div class="swiper-button-prev spacing-x" data-style="polygon"><span class="polygon-button prev"></span></div>
                         <div class="swiper-button-next spacing-x" data-style="polygon"><span class="polygon-button next"></span></div>
