@@ -2,7 +2,7 @@
 
 <?php include($root . "header.php"); ?>
 
-<main id="main" class="about-main">
+<main id="main">
     <section>
         <div class="sc-inner padding-bottom-0">
             <div class="sc-container container sm a-center">

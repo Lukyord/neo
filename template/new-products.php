@@ -1,7 +1,7 @@
-s<?php $root = ""; ?>
+<?php $root = ""; ?>
 
 <?php include($root . "header.php"); ?>
-<main id="main" class="about-main">
+<main id="main">
     <section class="new-products">
         <h1 class="size-h1 weight-medium c-theme">ผลิตภัณฑ์ใหม่ล่าสุดของเรา</h1>
 

@@ -1,7 +1,7 @@
 <?php $root = ""; ?>
 
 <?php include($root . "header.php"); ?>
-<main id="main" class="about-main">
+<main id="main">
     <section>
         <div class="sc-container container a-center">
             <img class="" src="./assets/img/design/brand-eversense.png" alt="brand-logo">
