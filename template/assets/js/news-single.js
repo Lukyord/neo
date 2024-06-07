@@ -1,20 +1,6 @@
-//Show scroll-bar when content text is being scrolled
-document.addEventListener("DOMContentLoaded", function () {
-  const contentContainerEL = document.getElementById("content");
-  const contentTextEL = document.querySelectorAll(".content-text");
-
-  contentTextEL.forEach(function (element) {
-    if (element.scrollHeight > contentContainerEL.clientHeight) {
-      element.classList.remove("invisible-scrollbar");
-    } else {
-      element.classList.add("invisible-scrollbar");
-    }
-  });
-});
-
 //SLIDER(AUTO) with THUMBS
 jQuery(function ($) {
-  if ($("#about").length) {
+  if ($("#news-single").length) {
     var _this = $(this);
 
     //CONTROLS
@@ -46,6 +32,7 @@ jQuery(function ($) {
       watchSlidesProgress: true,
       slideToClickedSlide: true,
       mouseWheelControl: true,
+      centerInsufficientSlides: true,
     });
 
     //SLIDES

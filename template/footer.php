@@ -42,6 +42,7 @@
             <script src="<?php echo $root; ?>assets/js/theme.js?v=<?php echo time(); ?>"></script>
             <script src="<?php echo $root; ?>assets/js/theme-wp.js?v=<?php echo time(); ?>"></script>
             <script src="<?php echo $root; ?>assets/js/about.js?v=<?php echo time(); ?>"></script>
+            <script src="<?php echo $root; ?>assets/js/news-single.js?v=<?php echo time(); ?>"></script>
 
 
             </body>
