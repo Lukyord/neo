@@ -1,4 +1,4 @@
-<div class="contact-card">
+<div class="swiper-slide contact-card">
     <img alt="contact-image" src="<?php echo $contact["image"] ?>" class="contact-image">
 
     <ul class="contact-info-lists">

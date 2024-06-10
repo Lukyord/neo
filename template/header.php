@@ -104,13 +104,13 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
                         </div>
                     </div>
 
+
+                    <div id="navigation" class="<?php if ($page_index) {
+                                                    echo 'always';
+                                                } ?>">
+                        <?php include($root . "include/element-brand.php"); ?>
+                    </div>
                 </div>
             </header>
-
-            <div id="navigation" class="<?php if ($page_index) {
-                                            echo 'always';
-                                        } ?>">
-                <?php include($root . "include/element-brand.php"); ?>
-            </div>
 
         <?php } ?>
