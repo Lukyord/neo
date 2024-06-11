@@ -129,7 +129,8 @@
   --border-color: currentColor;
   --border: var(--border-width) var(--border-style) var(--border-color);
 
-  --input-height: 40px;
+  --input-height: 53px;
+  --input-spacing: 20px;
   --input-spacing-x: 0px;
   --input-spacing-y: 0.3em;
   --input-border: var(--border-width) var(--border-style) var(--border-color);
@@ -1633,7 +1634,7 @@ a:hover {
 }
 
 /*FORM====================*/
-*:is(input, textarea, select) {
+/* *:is(input, textarea, select) {
   background: none;
   border-radius: 0;
   border: 0;
@@ -1651,7 +1652,23 @@ a:hover {
   width: 100%;
   height: var(--input-height);
   padding: var(--input-spacing-y) var(--input-spacing-x);
+} */
+*:is(input, textarea, select) {
+  background: none;
+  border-radius: 3px;
+  border: 1px solid var(--black-10, #ddd);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  line-height: normal;
+  vertical-align: middle;
+  width: 100%;
+  padding: var(--spacing-xs);
+  padding-bottom: var(--spacing-3xs);
+  padding-top: var(--spacing-sm);
+  color: var(--color-black);
 }
+
 textarea {
   --height: calc(var(--input-height) * 2);
   --input-spacing-y: 0.2em;
@@ -1677,10 +1694,10 @@ textarea {
 .select:after {
   font-family: "iconfont";
   content: "\e90c";
-  font-size: var(--font-size-2xs);
+  font-size: var(--font-size-body);
   font-weight: normal;
   line-height: 1;
-  color: inherit;
+  color: var(--color-theme);
   vertical-align: top;
   display: inline-flex !important;
   align-items: center;
@@ -1813,8 +1830,8 @@ textarea {
   height: var(--input-height);
   color: inherit;
   background: none;
-  border: 0;
-  border-bottom: var(--input-border);
+  border-radius: 3px !important;
+  border: 1px solid var(--black-10, #ddd);
   border-radius: 0;
   transition: none;
   overflow: hidden;
@@ -1825,10 +1842,12 @@ textarea {
   .select2-selection--single
   .select2-selection__rendered {
   display: block;
-  padding: var(--input-spacing-y) var(--input-spacing-x);
+  padding: var(--spacing-xs);
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-2xs);
   padding-right: var(--input-height);
   height: 100%;
-  line-height: calc(var(--input-height) - var(--input-spacing-y) * 2);
+  line-height: calc(var(--input-height) - var(--spacing-xs) * 2);
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -1862,7 +1881,7 @@ textarea {
   .select2-selection__clear {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: var(--spacing-xs);
   z-index: 1;
   display: block;
   width: calc(var(--input-height) / 2);
@@ -1871,6 +1890,7 @@ textarea {
   text-align: center;
   color: inherit;
   cursor: pointer;
+  color: var(--color-theme);
 }
 .select2-container--default
   .select2-selection--single
@@ -1893,7 +1913,7 @@ textarea {
   .select2-selection--single
   .select2-selection__clear:before {
   font-family: "iconfont";
-  font-size: var(--font-size-2xs);
+  font-size: var(--font-size-body);
   font-weight: normal;
   line-height: 1;
   vertical-align: top;
@@ -1910,6 +1930,7 @@ textarea {
   .select2-selection__arrow
   b:before {
   content: "\e90c";
+  font-size: 16px;
 }
 .select2-container--default
   .select2-selection--single
@@ -2114,7 +2135,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  grid-gap: var(--spacing-sm) 0;
+  grid-gap: var(--spacing-2xs) 0;
 }
 .field {
   position: relative;
@@ -2140,7 +2161,7 @@ textarea {
   font-weight: var(--font-weight-regular);
   font-size: inherit;
   text-transform: none;
-  color: var(--color-theme);
+  color: var(--color-black);
   opacity: 1;
 }
 .c-white .label {
@@ -2161,7 +2182,7 @@ textarea {
   overflow: hidden;
   position: absolute;
   z-index: 1;
-  left: 0;
+  left: var(--spacing-xs);
   top: calc(var(--input-height) / 2);
   transform: translateY(-50%);
   padding: 0 var(--input-spacing-x);
@@ -2177,7 +2198,7 @@ textarea {
 .input.filled .label.anim.fixed {
   top: 0;
   padding: 0;
-  transform: translateY(-50%);
+  transform: translateY(20%);
   font-size: var(--font-size-body-sub);
   opacity: var(--opacity);
 }
@@ -2245,7 +2266,7 @@ textarea {
   opacity: 1 !important;
 }
 .input ::-webkit-input-placeholder {
-  font-size: var(--font-size-xs) !important;
+  font-size: var(--font-size-body) !important;
   font-weight: var(--font-weight-regular) !important;
   font-style: normal !important;
   text-transform: none !important;
@@ -2328,8 +2349,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .file-upload-wrapper .file-upload-action {
   cursor: pointer;
   position: absolute;
+  transform: translate(0, -50%);
   right: 0;
-  top: 0;
+  top: 50%;
   z-index: 1;
   width: auto;
   min-width: var(--input-height);
@@ -2340,6 +2362,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .file-upload-wrapper .file-upload-button {
   font-size: var(--font-size-body);
+  padding-right: var(--spacing-xs);
 }
 .file-upload-wrapper .file-upload-button > * {
   margin: 0;
@@ -3766,6 +3789,10 @@ section.h-flex > .sc-grid-row {
     align-items: center;
     margin: 0 auto;
 
+    h1 {
+      font-size: 60px;
+    }
+
     .years {
       width: calc(100% + 2 * var(--spacing-container));
       mask-image: linear-gradient(
@@ -4162,6 +4189,9 @@ section.h-flex > .sc-grid-row {
   .swiper-slide.contact-card {
     width: 40% !important;
     padding: 0 min(2.5vw, 18px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
 
     .contact-image {
       width: 100%;
@@ -4170,6 +4200,201 @@ section.h-flex > .sc-grid-row {
       object-fit: cover;
       object-position: center;
       border-radius: var(--spacing-sm);
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .contact-info-lists {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+
+      .contact-info-list {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-2xs);
+        font-size: 25px;
+
+        svg {
+          min-width: 24px;
+        }
+      }
+    }
+
+    .contact-socials {
+      display: flex;
+      gap: var(--spacing-xs);
+      align-items: center;
+    }
+  }
+}
+
+/* CAREER */
+.career {
+  .career-cta {
+    display: none;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .swiper.thumbnail {
+    &.career-tabs {
+      width: 100%;
+    }
+
+    &.career-tabs:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content !important;
+    }
+
+    .swiper-slide .tab:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      max-height: 0;
+      background: var(--ci-gradient);
+      transition: all var(--duration-x2) var(--timing-function);
+    }
+
+    .swiper-slide-thumb-active {
+      .tab {
+        background: var(--ci-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .tab:after {
+        max-height: 4px;
+      }
+    }
+
+    .tab {
+      padding: var(--spacing-md) var(--spacing-lg);
+      cursor: pointer;
+    }
+
+    .tab:hover {
+      background: var(--ci-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .swiper.thumb {
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-lg);
+
+      &.value {
+        flex-direction: column;
+        gap: var(--spacing-md);
+      }
+
+      .gallery {
+        width: 50%;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          aspect-ratio: 3 / 2;
+          object-position: center;
+          border-radius: var(--spacing-sm);
+        }
+
+        .next-button {
+          right: 2.5%;
+        }
+
+        .prev-button {
+          left: 2.5%;
+        }
+      }
+
+      .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+
+        .eco-paragraph {
+          display: flex;
+          flex-direction: column;
+          gap: var(--spacing-2xs);
+        }
+      }
+    }
+  }
+}
+
+/* CAREER-APPLY */
+.career-apply {
+  h1 {
+    font-size: 60px;
+  }
+
+  .apply-form {
+    display: flex;
+    gap: var(--spacing-md);
+
+    .swiper-container {
+      width: 50%;
+      .swiper.gallery {
+        width: 100%;
+
+        .next-button {
+          right: 2.5%;
+        }
+
+        .prev-button {
+          left: 2.5%;
+        }
+
+        .swiper-slide {
+          width: 100% !important;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 3 / 2;
+            object-position: center;
+            border-radius: var(--spacing-sm);
+          }
+        }
+      }
+    }
+
+    form {
+      width: 50%;
+
+      .fields {
+        .tel-and-email {
+          display: flex;
+          width: 100%;
+          gap: var(--spacing-2xs);
+        }
+      }
     }
   }
 }

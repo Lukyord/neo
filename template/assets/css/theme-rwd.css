@@ -369,6 +369,10 @@
         height: 100%;
         padding: 0 var(--spacing-sm);
 
+        h1 {
+          font-size: 44px;
+        }
+
         .tab {
           padding: var(--spacing-sm);
         }
@@ -567,6 +571,189 @@
             padding-top: var(--spacing-container);
             border-top: 1px solid rgba(0, 0, 0, 0.26);
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* CONTACT */
+  .contact {
+    .next-button {
+      right: 2.5%;
+      top: 20%;
+    }
+
+    .prev-button {
+      left: 2.5%;
+      top: 20%;
+    }
+
+    .swiper-slide.contact-card {
+      width: 90% !important;
+
+      .contact-image {
+        border-radius: var(--spacing-xs);
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .contact-info-lists {
+        gap: var(--spacing-xs);
+
+        .contact-info-list {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  /* CAREER */
+  .career {
+    .career-cta {
+      z-index: 1;
+      width: calc(100vw - 2 * var(--spacing-container));
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      bottom: var(--footer-height);
+      left: var(--spacing-container);
+
+      .white-gradient {
+        width: 100%;
+        height: var(--spacing-xl);
+        background-image: linear-gradient(
+          180deg,
+          transparent 0%,
+          white var(--spacing-xl)
+        );
+      }
+
+      .explore {
+        width: 100%;
+        background-color: var(--color-white);
+        border-top: 1px solid rgba(0, 0, 0, 0.26);
+        padding: var(--spacing-container) 0;
+      }
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    .swiper.thumbnail {
+      &.career-tabs {
+        width: calc(100% + 2 * var(--spacing-container));
+        mask-image: linear-gradient(
+          90deg,
+          transparent 0%,
+          white calc(var(--spacing-container) * 2),
+          white calc(100% - var(--spacing-container) * 2),
+          transparent 100%
+        );
+        padding: 0 var(--spacing-container);
+        margin: 0 calc(-1 * var(--spacing-container));
+      }
+
+      &.career-tabs:after {
+        width: calc(100vw - 2 * var(--spacing-container));
+        margin: 0 auto;
+      }
+    }
+
+    .swiper.thumb {
+      .swiper-slide {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+
+        .gallery {
+          width: 100%;
+
+          .swiper-slide {
+            img {
+              width: 95%;
+            }
+          }
+
+          .next-button {
+            right: 1%;
+          }
+
+          .prev-button {
+            left: 1%;
+          }
+        }
+
+        .content {
+          width: 100%;
+          padding-bottom: calc(
+            var(--spacing-xl) + 4 * var(--spacing-container)
+          );
+        }
+
+        .explore {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* CAREER-APPLY */
+  .sc-career-apply {
+    .sc-inner {
+      height: calc(100vh - var(--header-height) - var(--footer-height));
+
+      .career-apply {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          font-size: 44px;
+        }
+
+        .apply-form {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: var(--spacing-sm);
+          flex: 1;
+          overflow-y: auto;
+
+          .swiper-container {
+            padding: 0 var(--spacing-container);
+            width: 100%;
+            .swiper.gallery {
+              width: 100%;
+              height: fit-content;
+
+              .next-button {
+                right: 1.5%;
+              }
+
+              .prev-button {
+                left: 1.5%;
+              }
+            }
+          }
+
+          form {
+            width: 100%;
+            padding: 0;
+            padding: 0 var(--spacing-container);
+
+            .fields {
+              .tel-and-email {
+                flex-direction: column;
+              }
+            }
           }
         }
       }

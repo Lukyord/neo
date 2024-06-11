@@ -153,6 +153,7 @@ jQuery(function ($) {
       .addClass("select2")
       .wrapAll('<div class="select"></div>');
   });
+
   $(".select").each(function () {
     var selectParent = $(this),
       select = $(this).find(".select2"),
@@ -292,7 +293,8 @@ jQuery(function ($) {
       ) {
         var _txtB = $(this).closest(".custom-file-upload").data("button");
       } else {
-        var _txtB = '<i class="ic ic-upload"></i>';
+        var _txtB =
+          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><mask id="mask0_979_15205" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"/></mask><g mask="url(#mask0_979_15205)"><path d="M11.3571 16.5989V5.47748L8.36043 8.47418L7.45053 7.54947L12 3L16.5495 7.54947L15.6396 8.47418L12.6429 5.47748V16.5989H11.3571ZM5.07691 21C4.48516 21 3.99107 20.8018 3.59464 20.4054C3.19821 20.0089 3 19.5148 3 18.9231V15.8077H4.28571V18.9231C4.28571 19.1209 4.36813 19.3022 4.53296 19.467C4.69781 19.6319 4.87912 19.7143 5.07691 19.7143H18.9231C19.1209 19.7143 19.3022 19.6319 19.467 19.467C19.6319 19.3022 19.7143 19.1209 19.7143 18.9231V15.8077H21V18.9231C21 19.5148 20.8018 20.0089 20.4054 20.4054C20.0089 20.8018 19.5148 21 18.9231 21H5.07691Z" fill="#004F9E"/></g></svg>';
       }
 
       var $file = $(this).addClass("custom-file-upload-hidden"),
@@ -1011,7 +1013,8 @@ jQuery(function ($) {
         slideAutoplay = _this.hasClass("autoplay"),
         slideClicked = _this.hasClass("clicked"),
         slidePause = _this.hasClass("pause"),
-        slideOffset = _this.hasClass("offset");
+        slideOffset = _this.hasClass("offset"),
+        slideFade = _this.hasClass("fade-effect");
 
       var mouseWheelControl = _this.hasClass("mousewheel-control");
 
@@ -1032,7 +1035,7 @@ jQuery(function ($) {
           nextEl: slideButtonNext || slideButtonNextParent,
           prevEl: slideButtonPrev || slideButtonPrevParent,
         },
-        effect: "slide",
+        effect: slideFade ? "fade" : "slide",
         loop: slideLoop && slideTotal > 1,
         speed: 1400,
         longSwipesMs: 1400,

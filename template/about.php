@@ -6,7 +6,7 @@
         <div class="sc-inner padding-bottom-0">
             <div id="about" class="sc-container container lg about">
 
-                <h1 class="about-heading size-h1 weight-medium c-theme">เกี่ยวกับนีโอ</h1>
+                <h1 class="about-heading weight-medium c-theme">เกี่ยวกับนีโอ</h1>
 
                 <div class="swiper thumbnail years">
                     <div class="swiper-wrapper">
@@ -65,7 +65,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 </main>
