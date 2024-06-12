@@ -35,8 +35,8 @@
                             endforeach;
                             ?>
                         </div>
-                        <div class="swiper-button-prev spacing-x" data-style="polygon"><span class="polygon-button prev"></span></div>
-                        <div class="swiper-button-next spacing-x" data-style="polygon"><span class="polygon-button next"></span></div>
+                        <div class="swiper-button-prev spacing-x prev-button" data-style="polygon"><span class="polygon-button prev"></span></div>
+                        <div class="swiper-button-next spacing-x next-button" data-style="polygon"><span class="polygon-button next"></span></div>
                     </div>
 
                 </div>

@@ -6,7 +6,7 @@
         <div class="sc-inner padding-bottom-0">
             <div id="about" class="sc-container container lg about">
 
-                <h1 class="about-heading weight-medium c-theme">เกี่ยวกับนีโอ</h1>
+                <h1 class="about-heading size-h1 weight-medium c-theme">เกี่ยวกับนีโอ</h1>
 
                 <div class="swiper thumbnail years">
                     <div class="swiper-wrapper">
@@ -24,16 +24,17 @@
                     </div>
                 </div>
 
-                <div id="content" class="content">
+                <div id="about-content" class="content">
                     <div class="swiper thumb">
                         <div class="swiper-wrapper">
                             <?php
                             $years = range(2545, 2575);
                             foreach ($years as $year) { ?>
                                 <div class="swiper-slide content-slide">
-                                    <div class="content-text invisible-scrollbar fade">
+                                    <div class="content-text fade">
                                         <h2 class="year-heading c-theme weight-medium size-h2"><?php echo $year ?></h2>
-                                        <ul class="year-lists">
+                                        <ul class="year-lists invisible-scrollbar">
+
                                             <?php
                                             $content = array(
                                                 'ดำเนินการเปลี่ยนชื่อบริษัทฯ เป็น บริษัท นีโอ คอร์ปอเรท จำกัด และ บริษัท นีโอ แฟคทอรี่ จำกัด',
@@ -51,6 +52,7 @@
                                                     <?php echo $item; ?>
                                                 </li>
                                             <?php } ?>
+
                                         </ul>
                                     </div>
                                     <div class="content-image fade">

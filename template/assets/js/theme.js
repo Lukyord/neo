@@ -293,8 +293,7 @@ jQuery(function ($) {
       ) {
         var _txtB = $(this).closest(".custom-file-upload").data("button");
       } else {
-        var _txtB =
-          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><mask id="mask0_979_15205" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"/></mask><g mask="url(#mask0_979_15205)"><path d="M11.3571 16.5989V5.47748L8.36043 8.47418L7.45053 7.54947L12 3L16.5495 7.54947L15.6396 8.47418L12.6429 5.47748V16.5989H11.3571ZM5.07691 21C4.48516 21 3.99107 20.8018 3.59464 20.4054C3.19821 20.0089 3 19.5148 3 18.9231V15.8077H4.28571V18.9231C4.28571 19.1209 4.36813 19.3022 4.53296 19.467C4.69781 19.6319 4.87912 19.7143 5.07691 19.7143H18.9231C19.1209 19.7143 19.3022 19.6319 19.467 19.467C19.6319 19.3022 19.7143 19.1209 19.7143 18.9231V15.8077H21V18.9231C21 19.5148 20.8018 20.0089 20.4054 20.4054C20.0089 20.8018 19.5148 21 18.9231 21H5.07691Z" fill="#004F9E"/></g></svg>';
+        var _txtB = '<i class="ic ic-upload c-theme size-lg"></i> <span>';
       }
 
       var $file = $(this).addClass("custom-file-upload-hidden"),
@@ -590,14 +589,7 @@ jQuery(function ($) {
 
             setTimeout(function () {
               if (_thisParent.find("> .entry-panel").is(":visible")) {
-                $("html,body").animate(
-                  {
-                    scrollTop: _thisParent.offset().top - _windowHeight,
-                  },
-                  800
-                );
-              } else {
-                $("html,body").animate(
+                _parent.animate(
                   {
                     scrollTop: _thisParent.offset().top - _windowHeight,
                   },

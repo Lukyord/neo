@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="sc-brands alignfull overflow-hidden">
-                    <div class="swiper auto autoplay loop">
+                    <div class="swiper auto loop">
                         <div class="swiper-wrapper brand-single">
                             <div class="swiper-slide">
                                 <div class="sc-banner">

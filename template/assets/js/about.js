@@ -1,7 +1,7 @@
 //Show scroll-bar when content text is being scrolled
 document.addEventListener("DOMContentLoaded", function () {
-  const contentContainerEL = document.getElementById("content");
-  const contentTextEL = document.querySelectorAll(".content-text");
+  const contentContainerEL = document.getElementById("about-content");
+  const contentTextEL = document.querySelectorAll(".year-lists");
 
   contentTextEL.forEach(function (element) {
     if (element.scrollHeight > contentContainerEL.clientHeight) {
@@ -88,6 +88,13 @@ jQuery(function ($) {
       thumbs: {
         swiper: swiperThumbs,
       },
+      on: {
+        slideChange: () =>
+          setTimeout(() => {
+            $(".swiper-slide-active .year-lists").scrollTop(0);
+            $("#about-content").scrollTop(0);
+          }, 350),
+      },
     });
 
     setTimeout(function () {
@@ -139,9 +146,6 @@ jQuery(function ($) {
       }
 
       activeSlide.find("tab");
-
-      console.log(activeIndex);
-      console.log(activeSlide.find("tab"));
     });
 
     if (slideTotal < 2) {

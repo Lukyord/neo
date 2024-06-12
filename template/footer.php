@@ -20,7 +20,9 @@
             <?php } ?>
             </div><!-- CLOSE:#page -->
 
-            <?php //if($page_index) { include($root."include/_wp-code/wp-cookie-law-info-bar.php"); } 
+            <?php if ($page_index) {
+                include($root . "include/_wp-code/wp-cookie-law-info-bar.php");
+            }
             ?>
 
             <div id="page-message">
