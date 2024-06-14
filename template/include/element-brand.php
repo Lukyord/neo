@@ -1,4 +1,9 @@
-<div class="brand-container">
+<?php
+$page = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
+$page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page == 'index.php');
+?>
+
+<div class="brand-container <?php echo $page == '404.php' ? 'pointer-events-none' : '' ?>">
     <div class="brand-nav">
         <ul>
             <li class="brand">

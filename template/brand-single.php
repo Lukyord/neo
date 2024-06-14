@@ -5,7 +5,9 @@
     <section>
         <div class="sc-inner padding-bottom-0">
             <div class="sc-container container a-center">
-                <img class="brand-single-logo" src="./assets/img/design/eversense-logo.png" alt="brand-logo">
+                <div class="brand-single-logo-wrapper">
+                    <img class="brand-single-logo" src="./assets/img/design/eversense-logo.png" alt="brand-logo">
+                </div>
 
                 <div class="sc-brands alignfull overflow-hidden">
                     <div class="swiper auto mousewheel-control insufficient centered-m">

@@ -1007,7 +1007,8 @@ jQuery(function ($) {
         slidePause = _this.hasClass("pause"),
         slideOffset = _this.hasClass("offset"),
         slideFade = _this.hasClass("fade-effect"),
-        slideAutoHeight = _this.hasClass("auto-height");
+        slideAutoHeight = _this.hasClass("auto-height"),
+        slideAutoHeightMobile = _this.hasClass("auto-height-m");
 
       var mouseWheelControl = _this.hasClass("mousewheel-control");
 
@@ -1017,7 +1018,7 @@ jQuery(function ($) {
       //INITIALIZE
       const swiper = new Swiper(_this[0], {
         //resistanceRatio: 0,
-        autoHeight: slideAutoHeight,
+        autoHeight: slideAutoHeightMobile,
         spaceBetween: 0,
         grabCursor: true,
         pagination: {
@@ -1053,6 +1054,7 @@ jQuery(function ($) {
         breakpoints: {
           992: {
             centeredSlides: slideCentered,
+            autoHeight: slideAutoHeight,
           },
         },
         init: false,

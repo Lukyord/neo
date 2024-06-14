@@ -1,6 +1,6 @@
 <?php $root = ""; ?>
 
-<?php include($root."header.php");?>
+<?php include($root . "header.php"); ?>
 
 <main id="main" class="error-main">
     <section class="h-flex">
@@ -16,7 +16,7 @@
                         </div>
 
                         <div class="sc-content">
-                            <?php include($root."include/element-brand.php");?>
+                            <?php include($root . "include/element-brand.php"); ?>
                         </div>
 
                         <div class="sc-headline">
@@ -27,11 +27,11 @@
                             <a class="explore" href="./index.php"><span class="polygon"><span class="arrow"></span></span>กลับหน้าแรก</a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-<?php include($root."footer.php");?>
+<?php include($root . "footer.php"); ?>
