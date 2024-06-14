@@ -9,7 +9,7 @@
                 <h1 class="a-center weight-medium c-theme">ร่วมงานกับนีโอฯ</h1>
 
                 <div class="apply-form alignfull-device-sm">
-                    <div class="swiper-container">
+                    <div class="swiper-container animate fadeIn">
                         <div class="swiper auto gallery fade-effect autoplay loop">
                             <div class="swiper-wrapper">
                                 <?php $workplace_image_arr = array(
@@ -35,34 +35,34 @@
 
 
                     <form>
-                        <div class="fields">
-                            <div class="field animate fadeIn">
+                        <div class="fields animate fadeIn">
+                            <div class="field">
                                 <div class="input">
                                     <label class="label anim fixed">ชื่อ</label>
                                     <input type="text">
                                 </div>
                             </div>
-                            <div class="field animate fadeIn">
+                            <div class="field">
                                 <div class="input">
                                     <label class="label anim fixed">นามสกุล</label>
                                     <input type="text">
                                 </div>
                             </div>
                             <div class="tel-and-email">
-                                <div class="field animate fadeIn">
+                                <div class="field">
                                     <div class="input">
                                         <label class="label anim fixed">เบอร์โทรศัพท์</label>
                                         <input type="number">
                                     </div>
                                 </div>
-                                <div class="field animate fadeIn">
+                                <div class="field">
                                     <div class="input">
                                         <label class="label anim fixed">อีเมล์</label>
                                         <input type="email">
                                     </div>
                                 </div>
                             </div>
-                            <div class="field animate fadeIn">
+                            <div class="field">
                                 <div class="input">
                                     <label class="label anim fixed">เลือกตำแหน่งงานที่สนใจ</label>
 
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="field animate fadeIn">
+                            <div class="field ">
                                 <div class="input">
                                     <label class="label anim fixed">อัพโหลด Resume</label>
                                     <div class="custom-file-upload" data-button="" data-placeholder="">
@@ -86,7 +86,7 @@
                             </div>
 
                         </div>
-                        <div class="fields-cta animate fadeIn">
+                        <div class="fields-cta">
                             <button type="submit" class="explore">
                                 <span class="polygon"><span class="arrow"></span></span>ส่งใบสมัครงาน
 

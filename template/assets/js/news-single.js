@@ -2,21 +2,22 @@
 jQuery(function ($) {
   if ($("#news-single").length) {
     var _this = $(this);
+    var _thisThumb = _this.find(".swiper.thumb");
 
     //CONTROLS
     var slideButtonNext = _this.find(".swiper-button-next")[0],
       slideButtonPrev = _this.find(".swiper-button-prev")[0];
 
     //MODULES
-    var slideCentered = _this.hasClass("centered"),
-      slideCenteredMobile = _this.hasClass("centered-m"),
-      slideCenterInsufficient = _this.hasClass("insufficient"),
-      slideLoop = _this.hasClass("loop"),
-      slideAutoplay = _this.hasClass("autoplay"),
-      slideClicked = _this.hasClass("clicked"),
-      slidePause = _this.hasClass("pause");
+    var slideCentered = _thisThumb.hasClass("centered"),
+      slideCenteredMobile = _thisThumb.hasClass("centered-m"),
+      slideCenterInsufficient = _thisThumb.hasClass("insufficient"),
+      slideLoop = _thisThumb.hasClass("loop"),
+      slideAutoplay = _thisThumb.hasClass("autoplay"),
+      slideClicked = _thisThumb.hasClass("clicked"),
+      slidePause = _thisThumb.hasClass("pause");
 
-    var mouseWheelControl = _this.hasClass("mousewheel-control");
+    var mouseWheelControl = _thisThumb.hasClass("mousewheel-control");
 
     //CHECK
     var slideTotal = _this.find(".swiper.thumb").find(".swiper-slide").length;
@@ -83,6 +84,8 @@ jQuery(function ($) {
 
       if (slideAutoplay) {
         if ($("html").hasClass("page-loading-html")) {
+          console.log("if");
+
           var timer = setInterval(function () {
             if ($("html").hasClass("loading-completed")) {
               swiper.autoplay.start();
@@ -126,9 +129,6 @@ jQuery(function ($) {
       }
 
       activeSlide.find("tab");
-
-      console.log(activeIndex);
-      console.log(activeSlide.find("tab"));
     });
 
     if (slideTotal < 2) {

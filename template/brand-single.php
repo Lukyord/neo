@@ -8,7 +8,7 @@
                 <img class="brand-single-logo" src="./assets/img/design/eversense-logo.png" alt="brand-logo">
 
                 <div class="sc-brands alignfull overflow-hidden">
-                    <div class="swiper auto mousewheel-control insufficient">
+                    <div class="swiper auto mousewheel-control insufficient centered-m">
                         <div class="swiper-wrapper brand-single">
                             <?php
                             $product_arr = array(

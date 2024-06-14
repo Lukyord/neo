@@ -1006,7 +1006,8 @@ jQuery(function ($) {
         slideClicked = _this.hasClass("clicked"),
         slidePause = _this.hasClass("pause"),
         slideOffset = _this.hasClass("offset"),
-        slideFade = _this.hasClass("fade-effect");
+        slideFade = _this.hasClass("fade-effect"),
+        slideAutoHeight = _this.hasClass("auto-height");
 
       var mouseWheelControl = _this.hasClass("mousewheel-control");
 
@@ -1016,6 +1017,7 @@ jQuery(function ($) {
       //INITIALIZE
       const swiper = new Swiper(_this[0], {
         //resistanceRatio: 0,
+        autoHeight: slideAutoHeight,
         spaceBetween: 0,
         grabCursor: true,
         pagination: {
@@ -1291,7 +1293,7 @@ jQuery(function ($) {
       var cloneChildWidth = nav.find("> ul").width();
       if (cloneChildWidth > cloneWidth) {
         _this.addClass("running");
-        navMarquee.liMarquee("start", 1500);
+        navMarquee.liMarquee("start", 500);
       } else {
         _this.removeClass("running");
         navMarquee.liMarquee("stop");

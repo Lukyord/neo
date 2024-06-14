@@ -4,7 +4,7 @@
                     <div class="footer-nav container">
 
                         <div class="footer-legal">
-                            <p class="copyright">Copyrights 2023 NEO Corporate Public Company Limited. <span class="inline-block">All rights reserved.</span> <span class="inline-block webby">By <a class="plaimanas" href="https://www.plaimanas.com" target="_blank">::*</a></span></p>
+                            <p class="copyright">©2023 NEO Corporate Public Company Limited. <span class="inline-block">All rights reserved</span> <span class="inline-block webby"><a class="plaimanas" href="https://www.plaimanas.com" target="_blank">::*</a></span></p>
 
                             <ul class="policy">
                                 <li><a href="<?php echo $root; ?>page.php">นโยบายความเป็นส่วนตัว</a></li>
@@ -39,6 +39,8 @@
             <script src="<?php echo $root; ?>assets/plugin/countup/jquery.waypoints.min.js"></script>
             <script src="<?php echo $root; ?>assets/plugin/countup/jquery.countup.min.js"></script>
             <script src="<?php echo $root; ?>assets/plugin/rellax/rellax.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/is-in-viewport/3.0.4/isInViewport.min.js"></script>
+
 
             <!-- JS:CONFIG -->
             <script src="<?php echo $root; ?>assets/js/theme.js?v=<?php echo time(); ?>"></script>

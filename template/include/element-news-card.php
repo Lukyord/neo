@@ -10,7 +10,9 @@
             <p class="news-description c-gray"><?php echo $news["short_description"] ?></p>
 
         </div>
-        <div class="explore"><span class="polygon"><span class="arrow"></span></span>อ่านต่อ</div>
+        <div class="explore-wrapper">
+            <div class="explore"><span class="polygon"><span class="arrow"></span></span>อ่านต่อ</div>
+        </div>
 
 
     </div>

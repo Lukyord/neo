@@ -49,7 +49,7 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
     <!-- web by ::* www.plaimanas.com -->
 </head>
 
-<body>
+<body class="<?php echo (in_array($page, ['about.php', 'career.php', 'news-single.php', 'career-apply-form.php', "page.php"])) ? 'no-scrollbar' : ''; ?>">
     <div id="page" class="<?php if ($page == '404.php') {
                                 echo 'error-page';
                             } ?>">
@@ -97,6 +97,10 @@ $page_index = ($page == basename(dirname($_SERVER['PHP_SELF']), "/") || $page ==
                                                 <li><a href="<?php echo $root; ?>career.php">ร่วมงานกับเรา</a></li>
                                                 <li><a href="<?php echo $root; ?>contact.php">ติดต่อเรา</a></li>
                                             </ul>
+                                        </div>
+                                        <div class="footer-links">
+                                            <a href="<?php echo $root; ?>page.php">นโยบายความเป็นส่วนตัว</a>
+                                            <a href="<?php echo $root; ?>page.php">ข้อกำหนดและเงื่อนไข</a>
                                         </div>
                                     </div>
                                 </div>
