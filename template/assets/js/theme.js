@@ -1290,16 +1290,31 @@ jQuery(function ($) {
     navMarquee.liMarquee({ circular: true, startShow: true });
     navMarquee.liMarquee("stop");
 
-    $(window).on("load resize", function () {
-      var cloneWidth = nav.width();
-      var cloneChildWidth = nav.find("> ul").width();
-      if (cloneChildWidth > cloneWidth) {
-        _this.addClass("running");
-        navMarquee.liMarquee("start", 500);
-      } else {
-        _this.removeClass("running");
-        navMarquee.liMarquee("stop");
-      }
-    });
+    $(window).on(
+      "load resize",
+      debounce(function () {
+        var cloneWidth = nav.width();
+        var cloneChildWidth = nav.find("> ul").width();
+        if (cloneChildWidth > cloneWidth) {
+          _this.addClass("running");
+          navMarquee.liMarquee("start", 500);
+        } else {
+          _this.removeClass("running");
+          navMarquee.liMarquee("stop");
+        }
+      }, 200)
+    ); // Adjust the delay (in milliseconds) as needed
+
+    function debounce(func, wait) {
+      var timeout;
+      return function () {
+        var context = this,
+          args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+          func.apply(context, args);
+        }, wait);
+      };
+    }
   });
 });

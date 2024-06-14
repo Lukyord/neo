@@ -143,9 +143,10 @@
 }
 /*MEDIA QUERIES:MAX====================*/
 @media (max-width: 1199px) {
-  /* HEADER */
-  /* NAVIGATION */
-  /* BRAND */
+  html.header-menu-enabled *:is(.header-brand) {
+    pointer-events: auto;
+  }
+
   .hidden-device {
     display: none !important;
   }
@@ -219,19 +220,6 @@
   }
 }
 @media (max-width: 991px) {
-  /* Hide the scrollbar for all elements */
-  /* BRANDS */
-  /* BRAND SINGLE */
-  /* NEW PRODUCT */
-  /* ABOUT */
-  /* NEWS */
-  /* NEWS-SINGLE */
-  /* CONTACT */
-  /* CAREER */
-  /* CAREER-APPLY */
-  /* PAGE */
-  /* FOOTER */
-  /* SECTION */
   .header-menu .panel-inner > .footer-links {
     display: flex;
     margin-top: auto;
@@ -244,6 +232,7 @@
   .header-menu .panel-inner > .footer-links a:hover {
     color: var(--color-theme);
   }
+
   .no-scrollbar {
     height: 100dvh;
     overflow: hidden;
@@ -287,20 +276,7 @@
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
   }
-  * {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  *::-webkit-scrollbar {
-    /* display: none;
-    */
-    background-color: transparent;
-    width: 0;
-    overflow: hidden;
-  }
-  *::-webkit-scrollbar-thumb {
-    background-color: transparent;
-  }
+
   .product-content {
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -313,14 +289,12 @@
   .product-content-text > .explore {
     margin-top: var(--spacing-xs);
   }
-  .product-content-image-wrapper {
-  }
 
   .product-content-image {
     height: 219px;
   }
   .brand-single-logo {
-    max-height: 85px;
+    height: 85px;
   }
   .swiper-wrapper.brand-single {
     padding: 0;
@@ -364,7 +338,7 @@
     .new-product-text
     .description {
     color: var(--color-black);
-    width: 80%;
+    width: 70%;
     text-align: center;
   }
   .swiper-slide.content-slide {

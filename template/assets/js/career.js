@@ -141,9 +141,6 @@ jQuery(function ($) {
       }
 
       activeSlide.find("tab");
-
-      console.log(activeIndex);
-      console.log(activeSlide.find("tab"));
     });
 
     if (slideTotal < 2) {
