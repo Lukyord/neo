@@ -1303,7 +1303,7 @@ jQuery(function ($) {
           navMarquee.liMarquee("stop");
         }
       }, 200)
-    ); // Adjust the delay (in milliseconds) as needed
+    );
 
     function debounce(func, wait) {
       var timeout;

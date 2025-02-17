@@ -7,7 +7,7 @@
         <div class="sc-inner padding-bottom-0">
             <div class="sc-container a-center">
                 <h1 class="news-heading size-h1 weight-medium c-theme">ข่าวสารล่าสุด</h1>
-                <div class="swiper auto news-swiper centered centered-m loop">
+                <div class="swiper auto news-swiper insufficient centered centered-m loop">
                     <div class="swiper-wrapper">
                         <?php
                         $news_arr = array(
